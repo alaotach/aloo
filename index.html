@@ -23,10 +23,29 @@
             width: 100vw;
             object-fit: cover;
             display: block;
+            cursor: pointer;
         }
     </style>
+
+    <script>
+        // Add your two URLs here
+        const links = [
+            "https://www.indianhealthyrecipes.com/potato-recipes-aloo-recipes/",
+            "https://gayhub.com"
+        ];
+
+        // Choose randomly
+        const chosen = links[Math.floor(Math.random() * links.length)];
+
+        // When image is clicked, redirect
+        window.onload = () => {
+            document.getElementById("alooImage").onclick = () => {
+                window.location.href = chosen;
+            };
+        };
+    </script>
 </head>
 <body>
-    <img src="aloo.jpg" alt="aloo khalo" />
+    <img id="alooImage" src="aloo.jpg" alt="aloo khalo" />
 </body>
 </html>
